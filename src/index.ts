@@ -1,25 +1,25 @@
-import express, { Application, Request, Response } from 'express'
-import morgan from 'morgan'
-import * as dotenv from 'dotenv'
+import express, { Application } from "express";
+import morgan from "morgan";
+import Paths from "./utilities/Paths";
+import Routes from "./routes/index";
 
-dotenv.config()
+const PORT = 3500;
 
-const PORT = process.env.PORT || 3000
 // create an instance server
-const app: Application = express()
-// HTTP request logger middleware
-app.use(morgan('short'))
+const app: Application = express();
 
-// add routing for / path
-app.get('/', (req: Request, res: Response) => {
-  res.json({
-    message: 'Hello World 🌍'
-  })
-})
+// Make Public Path As Static To be able to fetch images
+app.use(express.static(Paths.publicPath as string));
+
+// HTTP request logger middleware
+app.use(morgan("short"));
+
+// Add All Route As Middleware
+app.use(Routes);
 
 // start express server
 app.listen(PORT, () => {
-  console.log(`Server is starting at prot:${PORT}`)
-})
+  console.log(`Server Start - http://127.0.0.1:${PORT}`);
+});
 
-export default app
+export default app;
