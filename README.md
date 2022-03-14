@@ -2,6 +2,12 @@
 
 Image Processing API Project For FWD Nanodegree By : Mohamed Said
 
+# Important Install
+
+```
+npm install
+```
+
 # Important Production Scripts
 
 ```
