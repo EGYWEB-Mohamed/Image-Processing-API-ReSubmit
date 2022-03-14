@@ -19,6 +19,20 @@ npm run start
 5. npm run lint
 ```
 
+# Available Images
+
+```
+flag.jpg
+programmer.webp
+pyramids.jpg
+```
+
+# Image Process (resize) API
+
+```http
+http://127.0.0.1:3500/api/resize?source=flag.jpg&width=1920&height=1080
+```
+
 # Steps To Make it Work !
 
 1. Download Node.js From https://nodejs.org/en/download
