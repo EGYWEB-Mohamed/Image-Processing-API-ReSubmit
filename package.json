@@ -47,7 +47,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "jasmine": "^4.0.2",
     "jasmine-spec-reporter": "^7.0.0",
-    "m-zanaty-web-utils": "^0.0.19",
     "nodemon": "^2.0.15",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
